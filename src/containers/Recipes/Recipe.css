@@ -1,0 +1,10 @@
+.sideBar {
+    width: 20%;
+    float: left;
+}
+
+.main {
+    width: 80%;
+    text-align: left;
+    float: left;
+}
