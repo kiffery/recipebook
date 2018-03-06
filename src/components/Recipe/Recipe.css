@@ -1,0 +1,21 @@
+.recipe ul {
+    list-style: none;
+    display: inline-block;
+    text-align: left;
+    padding: 0;
+    display: block;
+    
+  }
+
+.ingredients {
+    width: 20%;
+    float: left; 
+    padding: 25px 0;
+}
+
+.instructions {
+    width: 80%;
+    text-align: right;
+    float: left;
+    padding: 25px 0;
+}

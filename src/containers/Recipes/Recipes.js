@@ -76,9 +76,7 @@ class Recipes extends Component {
     render () {
         return (
             <React.Fragment>
-                <div style={{width: '20%', float: 'left'}}>
-                    <Sidebar recipes={this.state.recipes} clicked={this.selectedRecipeHandler} />
-                </div>
+                <Sidebar recipes={this.state.recipes} clicked={this.selectedRecipeHandler} />
                 <div style={{width: '80%', textAlign: 'left', float: 'left'}}>
                     <Recipe currentRec={this.state.selectedRecipe} />
                 </div>

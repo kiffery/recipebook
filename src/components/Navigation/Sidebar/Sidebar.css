@@ -1,0 +1,30 @@
+.sideBar {
+    width: 20%;
+    float: left;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.sideBar input {
+    display: block;
+    text-align: center;
+}
+
+.sideBar ul {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    padding: 10;
+    display: block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    
+}
+
+.sideBar li {
+    border: 1px solid black;
+    margin: 10px;
+    width: 50%;
+    cursor: pointer;
+}
+
