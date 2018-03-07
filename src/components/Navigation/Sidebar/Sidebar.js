@@ -1,6 +1,7 @@
 import React from 'react';
-import SideBarItems from './SidebarItems/SidebarItems'
-import classes from './Sidebar.css'
+import SideBarItems from './SidebarItems/SidebarItems';
+import classes from './Sidebar.css';
+import SearchBar from './SearchBar/SearchBar'
 
 const sidebar = (props) => {
     let recipies = props.recipes.map((recipe, index) => {
@@ -9,7 +10,10 @@ const sidebar = (props) => {
     return(
         <div className={classes.sideBar}>
             <ul>
-                <input type="text" placeholder="Search.." />
+                <li>
+                    <SearchBar searched={props.searched} /> 
+                </li>
+                <hr />
                 {recipies}
             </ul>
         </div>

@@ -1,0 +1,14 @@
+.sideBarItems {
+    margin:0;
+    padding: 15px;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    font-size: 20pt;
+    cursor: pointer;
+}
+
+.sideBarItems:hover {
+    background-color: #f9f1f1;
+    background-size: auto; 
+}

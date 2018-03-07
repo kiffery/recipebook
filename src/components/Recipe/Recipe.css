@@ -1,3 +1,6 @@
+.recipe {
+    padding: 0 15px;
+}
 .recipe ul {
     list-style: none;
     display: inline-block;
@@ -10,12 +13,12 @@
 .ingredients {
     width: 20%;
     float: left; 
-    padding: 25px 0;
+    padding: 0;
 }
 
 .instructions {
     width: 80%;
     text-align: right;
     float: left;
-    padding: 25px 0;
+    padding: 0;
 }

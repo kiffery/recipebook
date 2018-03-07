@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import Recipe from '../../components/Recipe/Recipe';
-import Sidebar from '../../components/Navigation/Sidebar/Sidebar'; 
+import Sidebar from '../../components/Navigation/Sidebar/Sidebar';
+import classes from './Recipes.css'; 
 
 class Recipes extends Component {
     state = {
@@ -62,8 +63,12 @@ class Recipes extends Component {
                 "Cook the pasta in heavily salted water until al dente: that's italian for \"not total shit\" Then add to the tomato mixure, toss, and serve" 
             ]
         },
-        filter: null
+        filteredItems: null
     };
+
+    componentWillMount() {
+        this.setState({filteredItems: this.state.recipes});
+    }
 
     selectedRecipeHandler = (name) => {
         let newRecipe = this.state.recipes.find(recipe => {
@@ -73,11 +78,23 @@ class Recipes extends Component {
         this.setState({selectedRecipe: newRecipe});
     }
 
+    searchedHandler = (event) => {
+        if (event.target.value) {
+            let filtered = this.state.recipes.filter(recipe => recipe.name.toLocaleLowerCase().includes(event.target.value.toLocaleLowerCase()));
+            this.setState({filteredItems: filtered})
+
+        } else {
+            this.setState({filteredItems: this.state.recipes})
+        }
+    }
+
     render () {
         return (
             <React.Fragment>
-                <Sidebar recipes={this.state.recipes} clicked={this.selectedRecipeHandler} />
-                <div style={{width: '80%', textAlign: 'left', float: 'left'}}>
+                <div className={classes.sideBar} >
+                    <Sidebar recipes={this.state.filteredItems} clicked={this.selectedRecipeHandler} searched={this.searchedHandler}/> 
+                </div>
+                <div className={classes.main}>
                     <Recipe currentRec={this.state.selectedRecipe} />
                 </div>
             </React.Fragment>
