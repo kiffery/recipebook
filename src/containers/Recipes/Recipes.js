@@ -91,6 +91,9 @@ class Recipes extends Component {
     render () {
         return (
             <React.Fragment>
+                <div>
+                    <h1>Header</h1>
+                </div>
                 <div className={classes.sideBar} >
                     <Sidebar recipes={this.state.filteredItems} clicked={this.selectedRecipeHandler} searched={this.searchedHandler}/> 
                 </div>
