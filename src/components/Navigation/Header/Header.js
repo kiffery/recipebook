@@ -7,7 +7,7 @@ const header = (props) => (
     <div className={classes.container}>
         <div className={classes.left}>
             <h1>
-                Recipie Book
+                Recipe Book
             </h1>
         </div>
         <div className={classes.right}>

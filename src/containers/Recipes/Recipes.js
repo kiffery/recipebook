@@ -21,14 +21,14 @@ class Recipes extends Component {
                 ["bucatini", 12, "oz"]    
             ],
             instructions: [
-                "Dice the tomatoes and mozzarella and throw that shit into a bowl.",
+                "Dice the tomatoes and mozzarella and throw that stuff into a bowl.",
                 "Mince the garlic and tear the basil, and add them to the mix with olive oil  and salt and pepper to taste.",
                 "Don't pussyfoot around the salt and pepper, unless of course you have an affinity for shitty food; then please pussyfoot away. Let the mixure sit for an hour.",
                 "Cook the pasta in heavily salted water until al dente: that's italian for \"not total shit\" Then add to the tomato mixure, toss, and serve" 
             ]
         },
         {
-            name: 'Nah Bitch',
+            name: 'Another One',
             ingredients: [
                 ["This", 1.5, "lb"],
                 ["fresh mozzarella cheese", 8, "oz"],
@@ -40,10 +40,10 @@ class Recipes extends Component {
                 ["bucatini", 12, "oz"]    
             ],
             instructions: [
-                "Dice the tomatoes and mozzarella and throw that shit into a bowl.",
+                "Dice the tomatoes and mozzarella and throw that stuffinto a bowl.",
                 "Mince the garlic and tear the basil, and add them to the mix with olive oil  and salt and pepper to taste.",
-                "Don't pussyfoot around the salt and pepper, unless of course you have an affinity for shitty food; then please pussyfoot away. Let the mixure sit for an hour.",
-                "Cook the pasta in heavily salted water until al dente: that's italian for \"not total shit\" Then add to the tomato mixure, toss, and serve" 
+                "Don't mess around the salt and pepper, unless of course you have an affinity for poopy food; then please bad word away. Let the mixure sit for an hour.",
+                "Cook the pasta in heavily salted water until al dente: that's italian for \"not total poo\" Then add to the tomato mixure, toss, and serve" 
             ]
         }],
         selectedRecipe: {
@@ -61,8 +61,8 @@ class Recipes extends Component {
             instructions: [
                 "Dice the tomatoes and mozzarella and throw that shit into a bowl.",
                 "Mince the garlic and tear the basil, and add them to the mix with olive oil  and salt and pepper to taste.",
-                "Don't pussyfoot around the salt and pepper, unless of course you have an affinity for shitty food; then please pussyfoot away. Let the mixure sit for an hour.",
-                "Cook the pasta in heavily salted water until al dente: that's italian for \"not total shit\" Then add to the tomato mixure, toss, and serve" 
+                "Don't mess around the salt and pepper, unless of course you have an affinity for poopy food; then please badword away. Let the mixure sit for an hour.",
+                "Cook the pasta in heavily salted water until al dente: that's italian for \"not total poo\" Then add to the tomato mixure, toss, and serve" 
             ]
         },
         filteredItems: null,
