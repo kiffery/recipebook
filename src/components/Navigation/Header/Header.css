@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: black;
+    z-index: 201;
+    position: relative;
+}
+.left {
+    background-color: inherit;
+    color: black;
+    width: 80%;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.left h1 {
+    color: white;
+    margin: 0;
+    padding: 15px 0px;
+}
+
+.right {
+    width: 20%;
+    background-color: inherit;
+    text-align: left;
+    padding-left: 10px;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        flex-direction: row;
+        white-space: nowrap;
+    }
+    .left {
+        width: 20%;
+        text-align: center;
+    }
+    .right {
+        width: 80%;
+    }
+}

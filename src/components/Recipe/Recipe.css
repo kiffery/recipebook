@@ -1,5 +1,7 @@
 .recipe {
     padding: 0 15px;
+    display: flex;
+    flex-direction: column;
 }
 .recipe ul {
     list-style: none;
@@ -7,22 +9,40 @@
     text-align: left;
     padding: 0;
     display: block;
-    
   }
 
 .ingredients {
-    width: 20%;
+    width: 100%;
     float: left; 
     padding: 0;
 }
 
 .instructions {
-    width: 80%;
+    width: 100%;
     text-align: right;
     float: left;
     padding: 0;
 }
 
 .instructions ul {
-    padding: 0 0 0 15px;
+    padding: 0;
+}
+
+@media (min-width: 800px) {
+    .recipe {
+        display: inherit;
+        flex-direction: unset;
+    }
+
+    .ingredients{
+        width: 20%;
+    }
+
+    .instructions {
+        width: 80%;
+    }
+
+    .instructions ul {
+        padding: 0 0 0 15px;
+    }
 }

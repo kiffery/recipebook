@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 
 import Recipe from '../../components/Recipe/Recipe';
 import Sidebar from '../../components/Navigation/Sidebar/Sidebar';
-import classes from './Recipes.css'; 
+import classes from './Recipes.css';
+import Header from '../../components/Navigation/Header/Header';
+import Backdrop from '../../components/Navigation/Backdrop/Backdrop';
 
 class Recipes extends Component {
     state = {
@@ -63,7 +65,8 @@ class Recipes extends Component {
                 "Cook the pasta in heavily salted water until al dente: that's italian for \"not total shit\" Then add to the tomato mixure, toss, and serve" 
             ]
         },
-        filteredItems: null
+        filteredItems: null,
+        displaySide: false
     };
 
     componentWillMount() {
@@ -88,18 +91,28 @@ class Recipes extends Component {
         }
     }
 
+    onToggleHandler = () => {
+        this.setState({displaySide: !this.state.displaySide})
+    }
+
+
     render () {
+
+        let attachedClasses = [classes.sideBar, classes.Close];
+        if (this.state.displaySide) {
+            attachedClasses = [classes.sideBar, classes.Open];
+        }
+
         return (
             <React.Fragment>
-                <div>
-                    <h1>Header</h1>
-                </div>
-                <div className={classes.sideBar} >
+                <Header clicked={this.onToggleHandler} />
+                <div className={attachedClasses.join(' ')} >
                     <Sidebar recipes={this.state.filteredItems} clicked={this.selectedRecipeHandler} searched={this.searchedHandler}/> 
                 </div>
                 <div className={classes.main}>
                     <Recipe currentRec={this.state.selectedRecipe} />
                 </div>
+                <Backdrop show={this.state.displaySide} clicked={this.onToggleHandler}/> 
             </React.Fragment>
         );
     }
