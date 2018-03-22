@@ -1,5 +1,11 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 .sideBar {
-    position: fixed;
+    position: absolute;
+    top: 67px;
     width: 280px;
     max-width: 70%;
     height: 100%;
@@ -21,18 +27,17 @@
 .main {
     width: 100%;
     text-align: left;
-    float: left;
     position: relative;
 }
 
 @media (min-width: 1024px) {
     .sideBar {
         width: 20%;
-        float: left;
         margin: 30px auto;
         text-align: center;
         position: relative;
         border: 0;
+        top: initial;
     }
 
     .main {

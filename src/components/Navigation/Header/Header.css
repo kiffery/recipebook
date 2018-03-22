@@ -4,6 +4,8 @@
     background-color: black;
     z-index: 201;
     position: relative;
+    width: 100%;
+    max-height: 67px;
 }
 .left {
     background-color: inherit;

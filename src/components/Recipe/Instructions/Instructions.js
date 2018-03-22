@@ -8,6 +8,7 @@ const instructions = (props) => {
     });
     return (
         <ul>
+            <li><h3>Instructions</h3></li>
             {totInstructions}
         </ul>
     );

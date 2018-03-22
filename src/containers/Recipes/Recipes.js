@@ -9,7 +9,7 @@ import Backdrop from '../../components/Navigation/Backdrop/Backdrop';
 class Recipes extends Component {
     state = {
         recipes: [{
-            name: 'Bucatini',
+            name: "Bucatini",
             ingredients: [
                 ["plum tomatoes", 1.5, "lb"],
                 ["fresh mozzarella cheese", 8, "oz"],
@@ -104,7 +104,7 @@ class Recipes extends Component {
         }
 
         return (
-            <React.Fragment>
+            <div className={classes.container}>
                 <Header clicked={this.onToggleHandler} />
                 <div className={attachedClasses.join(' ')} >
                     <Sidebar recipes={this.state.filteredItems} clicked={this.selectedRecipeHandler} searched={this.searchedHandler}/> 
@@ -113,7 +113,7 @@ class Recipes extends Component {
                     <Recipe currentRec={this.state.selectedRecipe} />
                 </div>
                 <Backdrop show={this.state.displaySide} clicked={this.onToggleHandler}/> 
-            </React.Fragment>
+            </div>
         );
     }
 }

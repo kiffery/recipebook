@@ -12,11 +12,12 @@ const recipe = (props) => {
 
     return (
         <div className={classes.recipe}>
-            <div>
+                <div className={classes.title}>
                 <h1>{props.currentRec.name}</h1>
             </div>
             <div className={classes.ingredients}>
                 <ul>
+                    <li><h3>Ingredients</h3></li>
                     {ingredientList}
                 </ul>
             </div>
